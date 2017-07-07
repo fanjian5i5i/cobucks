@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import TextInput from './TextInput'
 import MainCard from './MainCard'
 import TopNav from './TopNav'
+import MainMap from './MainMap'
 
 class App extends Component {
 
@@ -9,7 +9,9 @@ class App extends Component {
     return (
       <div>
         <TopNav/>
-        <MainCard/>
+
+        <MainCard />
+        <MainMap />
       </div>
     )
   }

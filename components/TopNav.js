@@ -10,6 +10,9 @@ class TopNav extends Component {
     super(props)
     this.state = {open: true};
   }
+  handleGoHome(){
+    location.reload();
+  }
   render() {
     var that = this;
     return (
@@ -18,11 +21,7 @@ class TopNav extends Component {
           <div className="pt-navbar-heading">Cobucs</div>
         </div>
         <div className="pt-navbar-group pt-align-right">
-          <button className="pt-button pt-minimal pt-icon-home">Home</button>
-          <span className="pt-navbar-divider"></span>
-          <button className="pt-button pt-minimal pt-icon-user"></button>
-          <button className="pt-button pt-minimal pt-icon-notifications"></button>
-          <button className="pt-button pt-minimal pt-icon-cog"></button>
+          <button className="pt-button pt-minimal pt-icon-home" onClick={this.handleGoHome.bind(this)}>Home</button>
         </div>
       </nav>
     )
